@@ -2,32 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="exchange.png">
-    <title>Currency Convertor</title>
+    <title>Password Generator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/png" href="password.png">
 </head>
 <body>
-    <div class="container">
-        <h1>Currency Convertor</h1>
-        <div class="box">
-            <div class="left-box">
-                <select name="currency" class="currency">
-                    
-                </select>
-                <input type="number" name="" id="input">
-            </div>
-            <div class="right-box">
-                <select name="currency" class="currency"></select>
-                <input type="number" name="" id="result">
-            </div>
-        </div>
-        <div class="btn">
-            <button id="btn">Convert</button>
-        </div>
+
+    <h1>Password Generator</h1>
+    
+    <form id="passwordForm">
+        <label for="charInput">Number of characters:</label>
+        <input type="number" id="charInput" min="1" required>
         
-    </div>
-    <script src="script.js"></script>
+        <label for="splInput">Number of special characters:</label>
+        <input type="number" id="splInput" min="0" required>
+        
+        <label for="numInput">Number of numbers:</label>
+        <input type="number" id="numInput" min="0" required>
+        <br>
+        <br>
+        <center>
+            <button type="button" onclick="generatePassword()">Generate Password</button>
+        </center>
+    </form>
+
+    <div id="generatedPassword"></div>
+
+    <script type="text/javascript" src="script.js"></script>
+
 </body>
 </html>
